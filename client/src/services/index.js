@@ -1,4 +1,4 @@
-import { request } from './api.js';
+import { request, API_BASE } from './api.js';
 
 export const authApi = {
   login: (credentials) => request('/auth/login', {
@@ -55,7 +55,6 @@ export const conversationsApi = {
 export const chatApi = {
   async streamChat({ question, conversationId, documentIds, onToken, onCitation, onComplete, onError, signal }) {
     const token = localStorage.getItem('documind_token');
-    const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api/v1';
 
     try {
       const response = await fetch(`${API_BASE}/chat/stream`, {

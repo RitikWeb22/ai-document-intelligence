@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api/v1';
+export const API_BASE = import.meta.env.VITE_API_BASE || 'https://ai-document-intelligence-lwxo.onrender.com/api/v1';
 
 export class ApiError extends Error {
   constructor(message, code = 'API_ERROR', status = 500) {
