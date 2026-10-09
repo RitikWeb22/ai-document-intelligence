@@ -13,9 +13,11 @@ AGENTS.md
 
 # Storage & Uploads
 uploads/
-storage/
+/storage/
 temp/
 *.log
+!server/src/services/storage/
+
 
 # Build outputs
 dist/
